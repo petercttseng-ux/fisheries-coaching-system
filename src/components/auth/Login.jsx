@@ -3,19 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../../contexts/AppContext.jsx'
 
 const FRILogo = () => (
-  <svg viewBox="0 0 200 200" width="90" height="90" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="95" fill="#e0f7fa" stroke="#0891b2" strokeWidth="4"/>
-    <circle cx="100" cy="100" r="85" fill="none" stroke="#0891b2" strokeWidth="2"/>
-    <ellipse cx="100" cy="105" rx="45" ry="25" fill="none" stroke="#0d9488" strokeWidth="3" transform="rotate(-15 100 105)"/>
-    <path d="M140 90 L160 75 L155 95 L165 110 L140 100 Z" fill="#0d9488" opacity="0.8"/>
-    <circle cx="75" cy="97" r="4" fill="#0d9488"/>
-    <path d="M55 115 Q100 70 150 95" fill="none" stroke="#0891b2" strokeWidth="3"/>
-    <path id="topArc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none"/>
-    <text fontSize="12" fill="#0891b2" fontWeight="bold">
-      <textPath href="#topArc" startOffset="10%">農業部水產試驗所</textPath>
-    </text>
-    <text x="100" y="178" textAnchor="middle" fontSize="9" fill="#0891b2" fontWeight="bold">FISHERIES RESEARCH INSTITUTE</text>
-  </svg>
+  <img
+    src={`${import.meta.env.BASE_URL}fri-logo.jpg`}
+    alt="農業部水產試驗所"
+    style={{ width: 100, height: 100, borderRadius: '50%', objectFit: 'cover', boxShadow: '0 4px 16px rgba(8,145,178,0.25)' }}
+    onError={e => { e.target.style.display='none' }}
+  />
 )
 
 export default function Login() {

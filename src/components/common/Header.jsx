@@ -4,13 +4,12 @@ import { AppContext } from '../../contexts/AppContext.jsx'
 import { toast } from 'react-toastify'
 
 const FRILogo = () => (
-  <svg viewBox="0 0 200 200" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="95" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.6)" strokeWidth="4"/>
-    <ellipse cx="100" cy="105" rx="45" ry="25" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="3" transform="rotate(-15 100 105)"/>
-    <path d="M140 90 L160 75 L155 95 L165 110 L140 100 Z" fill="rgba(255,255,255,0.8)"/>
-    <circle cx="75" cy="97" r="4" fill="white"/>
-    <path d="M55 115 Q100 70 150 95" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="3"/>
-  </svg>
+  <img
+    src={`${import.meta.env.BASE_URL}fri-logo.jpg`}
+    alt="FRI Logo"
+    style={{ width: 40, height: 40, borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(255,255,255,0.6)' }}
+    onError={e => { e.target.style.display='none' }}
+  />
 )
 
 const roleLabels = { admin: '系統管理員', manager: '管理人員', researcher: '研究人員' }
